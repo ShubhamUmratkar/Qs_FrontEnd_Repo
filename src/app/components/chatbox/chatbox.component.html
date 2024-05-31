@@ -1,0 +1,22 @@
+<section class="section--background">
+  <div class="chatbox-container">
+  <div class="chatbox" >
+      <div class="chatbox-header">
+        ChatBox
+      </div>
+      <div class="chatbox-body">
+          <div *ngFor="let messages of messages " class="chatbox-message">
+          <span class="chatbox-message-text">{{ messages.text }}</span>
+    
+        </div>
+      </div>
+
+      <div class="chatbox-footer">
+        <form (ngSubmit)="sendMessage()" #messageForm="ngForm">
+          <input type="text" [(ngModel)]="newMessage" name="message" required placeholder="Type a message..." class="message"    />
+          <button type="submit" [disabled]="messageForm.form.invalid" >Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>

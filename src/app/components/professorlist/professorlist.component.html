@@ -28,7 +28,11 @@
                 <div class="status-btn2">Rejected</div>
             </div>
             <div *ngIf="professor.status === 'false'" >
-                <div class="status-btn1">Approval Pending</div>
+                
+                <button class="status-btn1">Approval Pending</button>
+                <button (click)="onClicked()" style="margin-top:5% ;">ChatBox</button>
+                
+
             </div>
         </div>
     </div>

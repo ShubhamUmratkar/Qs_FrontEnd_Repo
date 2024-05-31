@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Professor } from 'src/app/models/professor';
 import { ProfessorService } from 'src/app/services/professor.service';
@@ -15,7 +16,7 @@ export class ProfessorlistComponent implements OnInit {
   currRole = '';
   professorlist : Observable<Professor[]> | undefined;
   
-  constructor(private _service : ProfessorService) { }
+  constructor(private _service : ProfessorService, private _router: Router) { }
 
   ngOnInit(): void 
   
@@ -29,5 +30,10 @@ export class ProfessorlistComponent implements OnInit {
 
     this.professorlist = this._service.getProfessorList();
   }
+
+  onClicked(){
+    this._router.navigate(['/chatbox']);
+   
+    }
 
 }

@@ -40,6 +40,14 @@ import { ReferEarnComponent } from './components/refer-earn/refer-earn.component
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 
+import { Routes, RouterModule } from '@angular/router';
+import { chatboxComponent } from './components/chatbox/chatbox.component';
+import { MessageComponent } from './components/message/message.component';
+import { ChatService } from './services/chat.service';
+
+
+
+
 @NgModule({
 
   declarations: [
@@ -78,6 +86,9 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     jobsComponent,
   
     aboutusComponent,
+    MessageComponent,
+    chatboxComponent
+
     
   ],
   
@@ -91,9 +102,10 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     YouTubePlayerModule,
   
     MDBBootstrapModule.forRoot(),
+    RouterModule
     
   ],
-  providers: [ResetpasswordComponent,jobsComponent],
+  providers: [ResetpasswordComponent,jobsComponent,ChatService],
   bootstrap: [AppComponent, RegistrationComponent]
 })
 export class AppModule { }

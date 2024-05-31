@@ -36,6 +36,10 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
 import { ReferEarnComponent } from './components/refer-earn/refer-earn.component';
 import { EventsComponent } from './components/events/events.component';
 
+import { chatboxComponent } from './components/chatbox/chatbox.component';
+import { MessageComponent } from './components/message/message.component';
+
+
 
 const routes: Routes = [
   
@@ -43,7 +47,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'jobs',component:jobsComponent},
   {path:'resetpassword',component:ResetpasswordComponent,pathMatch: 'full' },
-  
+
   {path:'aboutus',component:aboutusComponent },
   {path:'review',component:ReviewComponent },
   {path:'termcondition',component:TermConditionComponent },
@@ -51,6 +55,9 @@ const routes: Routes = [
   {path:'referearn',component:ReferEarnComponent },
   {path:'events',component:EventsComponent },
   {path:'privacypolicy',component:PrivacyPolicyComponent },
+  {path:'chatbox',component:chatboxComponent},
+  {path:'message',component:MessageComponent},
+
   
 
 
@@ -71,7 +78,11 @@ const routes: Routes = [
   {path:'editprofessorprofile',component:ProfessorprofileComponent,canActivate:[ProfessorGuard]},
   {path:'edituserprofile',component:UserprofileComponent,canActivate:[UserGuard]},
   {path:'mywishlist',component:MywishlistComponent,canActivate:[RouterGuard]},
-  {path:'mycourses',component:MycoursesComponent,canActivate:[RouterGuard]}
+  {path:'mycourses',component:MycoursesComponent,canActivate:[RouterGuard]},
+
+
+
+
 ];
 
 @NgModule({

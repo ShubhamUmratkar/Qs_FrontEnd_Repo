@@ -53,22 +53,6 @@ export class UserprofileComponent implements OnInit {
   {
     this.profileDetails = this._service.getProfileDetails(this.loggedUser);
     console.log(this.profileDetails);
-
-    
-    // this._service.getProfileDetails(loggedUser).subscribe(
-    //   (data: any) => {
-    //     this.profileDetails = data; // Assign fetched profile details to profileDetails variable
-    //   },
-    //   (error: any) => {
-    //     console.error('Error fetching profile details:', error);
-    //   }
-    // );
-
-
-    // this._service.getProfileDetails(loggedUser).subscribe((data: any) => {
-    //   this.user = data; // Assign fetched user data to the user object
-    //   console.log(this.user); // Check the fetched user data in console
-    // });
   }
 
   updateUserProfile()
